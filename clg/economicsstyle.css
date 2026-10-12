@@ -1,0 +1,89 @@
+/* Department Ribbon Banner (Screenshot 2) */
+.dept-banner-wrap {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: #0f1f3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dept-ribbon.h1{
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid #fc03f4;
+            color:#fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            
+}
+  
+
+/* Faculty Cards (Screenshot 3) */
+.faculty-section {
+  max-width: 1150px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.faculty-grid-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  justify-content: center;
+}
+
+.faculty-grid-bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.faculty-card {
+  background-color: #d1d5db; /* Gray card background from screenshot */
+  border-radius: 12px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 330px;
+  width: 100%;
+}
+
+.faculty-avatar-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid #334155;
+  background-color: #94a3b8;
+  margin-bottom: 16px;
+}
+
+.faculty-name {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #0f1f3d;
+  margin-bottom: 6px;
+}
+
+.faculty-meta {
+  font-size: 0.82rem;
+  color: #1e293b;
+  margin-bottom: 3px;
+}
+
+.faculty-profile-btn {
+  color: #0284c7;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Department of Economics | Majuli College</title>
+  <link rel="stylesheet" href="economicsstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- VIEW 1: Humanities & Social Sciences Overview (Screenshot 1) -->
+  <section id="humanitiesOverviewSection" style="display: none;">
+    <div class="dept-grid">
+      <!-- Economics Card -->
+      <div class="dept-box-card">
+        <div class="dept-card-top-row">
+          <div class="dept-icon-squircle"><i class="fa-solid fa-chart-line"></i></div>
+          <span class="dept-code-pill">ECO · Estd. 1962</span>
+        </div>
+        <h3>FYUGP ECONOMICS (B.A.)</h3>
+        <p>Honours majors across micro & macro economics, public finance, and riverine development.</p>
+        <!-- Click to open Screenshots 2 & 3 -->
+        <button type="button" class="btn-explore-faculty" onclick="showEconomicsView()">
+          Explore Curriculum &amp; Faculty &rarr;
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIEW 2: Department of Economics (Screenshots 2 & 3) -->
+  <section id="economicsDepartmentSection" style="display: block;">
+    <!-- Banner (Screenshot 2) -->
+    <div class="dept-banner-wrap">
+      <div class="dept-ribbon">
+        <h1>Department: Economics</h1>
+      </div>
+    </div>
+
+    <!-- About Section (Screenshot 2) -->
+    <main class="about-dept-container">
+      <h2 class="about-dept-title">About the Department</h2>
+      <p class="about-dept-text">Department of Economics, Majuli College is as old as our institution which was established in 1962. The department was headed by founder professor Bipin Ch. Goswami till his retirement in 2000. In 1965, Professor Muhidhar Bharali joined as lecturer in the department and he retired from the service in 1998. In 1967, Professor Umakanta Rajkhowa joined the department and he retired from the college in 2004. In December 1991, Dr. Rajen Chandra Borah joined the department as a lecturer and a few years later Dr.Debajit Saikia and Dr.Brojen Chandra Neog joined the department as a lecturer. Dr.Debajit Saikia was promoted to Principal in our college in the year 2015. In 2006, for the first time a permanent lady teacher, Dr. Rupjyoti Borah was appointed in the department. In February-2020, Mr. Dinesh Pegu, another alumnus had got a permanent appointment in our department.
+
+At present we have four faculty members namely Dr. Rajen Chandra Borah, Dr.Brojen Chandra Neog, Dr.Rupjyoti Borah, and Mr. Dinesh Pegu,(MA, MPhil).
+
+Department of Economics has a glorious legacy with good academic performance in the diverse fields of society. Now the departmental total students ‘strength in the Honours course is 57 covering first semester 17, Third semester 15, and Fifth semester 25. Faculty members are also cooperative and dynamic.</p>
+      <h3 class="vision-title">Vision:</h3>
+      <p class="about-dept-text">To establish an excellent research center for economic analysis...</p>
+      <div class="intake-capacity-line"><strong>Intake capacity (Major):</strong> 40</div>
+    </main>
+
+    <!-- Faculty Grid (Screenshot 3) -->
+    <section class="faculty-section">
+      <h2 class="faculty-heading">Faculty</h2>
+      <div class="faculty-grid-top">
+        <!-- Faculty Card 1 -->
+        <div class="faculty-card">
+          <div class="faculty-avatar-circle"></div>
+          <h3 class="faculty-name">Dr. Rajen Chandra Borah</h3>
+          <div class="faculty-meta"><strong>Designation:</strong> Associate Professor</div>
+          <div class="faculty-meta"><strong>Phone No:</strong> 9401007878</div>
+          <div class="faculty-meta"><strong>Email:</strong> rajenborah54@gmail.com</div>
+          <button class="faculty-profile-btn" onclick="openFacultyProfile('rajen')">View Profile</button>
+        </div>
+
+        <!-- Faculty Card 2 -->
+        <div class="faculty-card">
+          <div class="faculty-avatar-circle"></div>
+          <h3 class="faculty-name">Dr. Brojen Chandra Neog</h3>
+          <div class="faculty-meta"><strong>Designation:</strong> Associate Professor</div>
+          <div class="faculty-meta"><strong>Phone No:</strong> 7002759568</div>
+          <div class="faculty-meta"><strong>Email:</strong> brojenchandraneog@gmail.com</div>
+          <button class="faculty-profile-btn" onclick="openFacultyProfile('brojen')">View Profile</button>
+        </div>
+
+        <!-- Faculty Card 3 -->
+        <div class="faculty-card">
+          <div class="faculty-avatar-circle"></div>
+          <h3 class="faculty-name">Dr. Rupjyoti Borah</h3>
+          <div class="faculty-meta"><strong>Designation:</strong> Associate Professor</div>
+          <div class="faculty-meta"><strong>Phone No:</strong> 9435641634</div>
+          <div class="faculty-meta"><strong>Email:</strong> rupjyotiborah87@gmail.com</div>
+          <button class="faculty-profile-btn" onclick="openFacultyProfile('rupjyoti')">View Profile</button>
+        </div>
+      </div>
+
+      <!-- Centered Bottom Row (Card 4) -->
+      <div class="faculty-grid-bottom">
+        <div class="faculty-card">
+          <div class="faculty-avatar-circle"></div>
+          <h3 class="faculty-name">Mr. Dinesh Pegu</h3>
+          <div class="faculty-meta"><strong>Designation:</strong> Assistant Professor</div>
+          <div class="faculty-meta"><strong>Phone No:</strong> 9101541314</div>
+          <div class="faculty-meta"><strong>Email:</strong> dineshpegumc@gmail.com</div>
+          <button class="faculty-profile-btn" onclick="openFacultyProfile('dinesh')">View Profile</button>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

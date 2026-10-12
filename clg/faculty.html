@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Section - Self Contained Design</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* ==========================================================================
+           SELF-CONTAINED FACULTY CARDS DESIGN (DROP-IN COMPONENT)
+           Works in any HTML file without external CSS files.
+           ========================================================================== */
+        
+        .faculty-wrapper-root {
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            background-color: #f8fafc;
+            padding: 40px 16px;
+            color: #1e293b;
+        }
+
+        .faculty-section {
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        .faculty-header-wrap,
+        .faculty-header-section {
+            text-align: left;
+            margin-bottom: 28px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 14px;
+        }
+
+        .faculty-main-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0f1f3d;
+            letter-spacing: -0.5px;
+            margin: 0 0 6px 0;
+        }
+
+        .faculty-header-sub {
+            font-size: 0.92rem;
+            color: #64748b;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* 3-column responsive grid on desktop, 1-column on mobile */
+        .faculty-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px;
+            margin-bottom: 26px;
+        }
+
+        /* Individual Faculty Card with Dark Navy Top Container */
+        .faculty-box-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            position: relative;
+            text-align: center;
+        }
+
+        .faculty-box-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 30px rgba(15, 31, 61, 0.12);
+            border-color: #cbd5e1;
+        }
+
+        /* Top Dark Navy Container */
+        .faculty-card-cover {
+            background: linear-gradient(135deg, #0b1528 0%, #0f1f3d 100%);
+            height: 96px;
+            width: 100%;
+            position: relative;
+        }
+
+        .faculty-card-cover::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0082cb, #38bdf8);
+        }
+
+        /* Circular Avatar overlapping the dark navy container */
+        .faculty-avatar {
+            width: 124px;
+            height: 124px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #ffffff;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+            margin: -62px auto 12px auto;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .faculty-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 50%;
+        }
+
+        /* Card Body Content */
+        .faculty-card-content {
+            padding: 0 20px 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+
+        .faculty-box-card h3 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #0f1f3d;
+            margin: 4px 0 6px;
+            line-height: 1.35;
+        }
+
+        .faculty-role-badge,
+        .faculty-box-card .designation {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #0082cb;
+            background: #f0f9ff;
+            padding: 3px 12px;
+            border-radius: 9999px;
+            border: 1px solid #bae6fd;
+            margin-bottom: 12px;
+        }
+
+        .faculty-info-list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 16px;
+            font-size: 0.82rem;
+            color: #475569;
+        }
+
+        .faculty-info-item,
+        .faculty-box-card p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            font-size: 0.82rem;
+            color: #475569;
+            margin: 0;
+            line-height: 1.4;
+            word-break: break-word;
+        }
+
+        .faculty-info-item i,
+        .faculty-box-card p i {
+            color: #0082cb;
+            font-size: 0.85rem;
+        }
+
+        .faculty-box-card p strong {
+            color: #1e293b;
+            font-weight: 700;
+        }
+
+        .faculty-box-card p a {
+            color: #0082cb;
+            text-decoration: none;
+        }
+
+        .faculty-box-card p a:hover {
+            text-decoration: underline;
+        }
+
+        .faculty-box-card .btn-profile {
+            margin-top: auto;
+            background-color: #0082cb;
+            color: #ffffff;
+            border: none;
+            padding: 8px 24px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0, 130, 203, 0.25);
+            transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+        }
+
+        .faculty-box-card .btn-profile:hover {
+            background-color: #006eb0;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 130, 203, 0.4);
+        }
+
+        .faculty-box-card .btn-profile:active {
+            transform: translateY(0);
+        }
+
+        /* 4th Card Centered Row */
+        .faculty-center-row {
+            max-width: 340px;
+            margin: 26px auto 0;
+        }
+
+        @media (max-width: 992px) {
+            .faculty-cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .faculty-center-row {
+                max-width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            .faculty-center-row .faculty-box-card {
+                max-width: 340px;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .faculty-cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<script src="/_aistudio-iframe.js?v=6634132a"></script></head>
+<body>
+
+    <!-- =========================================================================
+         START COPYING FROM HERE FOR YOUR WEBSITE
+         ========================================================================= -->
+    <div class="faculty-wrapper-root">
+        <section class="faculty-section">
+            
+            <!-- Section Header (Left-aligned match to screenshot) -->
+            <div class="faculty-header-section">
+                <h2 class="faculty-main-title">Faculty</h2>
+                <p class="faculty-header-sub">Department of Assamese &bull; Faculty Members</p>
+            </div>
+
+            <!-- Top Row: 3 Faculty Cards -->
+            <div class="faculty-cards-grid">
+                
+                <!-- Faculty 1: Dr. Dulai Hazarika, HOD -->
+                <div class="faculty-box-card">
+                    <div class="faculty-card-cover"></div>
+                    <div class="faculty-avatar">
+                        <img 
+                            src="faculty_dulai_hazarika.jpg" 
+                            alt="Dr. Dulai Hazarika" 
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80';"
+                        >
+                    </div>
+                    <div class="faculty-card-content">
+                        <h3>Dr. Dulai Hazarika, HOD</h3>
+                        <span class="faculty-role-badge">Associate Professor</span>
+                        <div class="faculty-info-list">
+                            <p><i class="fa-solid fa-phone"></i> <strong>Phone No:</strong> <a href="tel:9435738676">9435738676</a></p>
+                            <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> <a href="mailto:hazarika.dulai@gmail.com">hazarika.dulai@gmail.com</a></p>
+                        </div>
+                        <button class="btn-profile" onclick="alert('Profile: Dr. Dulai Hazarika, HOD (Assamese Department)')"><i class="fa-solid fa-user"></i> View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Faculty 2: Rubi Bora -->
+                <div class="faculty-box-card">
+                    <div class="faculty-card-cover"></div>
+                    <div class="faculty-avatar">
+                        <img 
+                            src="faculty_rubi_bora.jpg" 
+                            alt="Rubi Bora" 
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80';"
+                        >
+                    </div>
+                    <div class="faculty-card-content">
+                        <h3>Rubi Bora</h3>
+                        <span class="faculty-role-badge">Assistant Professor</span>
+                        <div class="faculty-info-list">
+                            <p><i class="fa-solid fa-phone"></i> <strong>Phone No:</strong> <a href="tel:9954522918">9954522918</a></p>
+                            <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> <a href="mailto:borarubi55@gmail.com">borarubi55@gmail.com</a></p>
+                        </div>
+                        <button class="btn-profile" onclick="alert('Profile: Rubi Bora, Assistant Professor (Assamese Department)')"><i class="fa-solid fa-user"></i> View Profile</button>
+                    </div>
+                </div>
+
+                <!-- Faculty 3: Pritirekha Gogoi -->
+                <div class="faculty-box-card">
+                    <div class="faculty-card-cover"></div>
+                    <div class="faculty-avatar">
+                        <img 
+                            src="faculty_pritirekha_gogoi.jpg" 
+                            alt="Pritirekha Gogoi" 
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80';"
+                        >
+                    </div>
+                    <div class="faculty-card-content">
+                        <h3>Pritirekha Gogoi</h3>
+                        <span class="faculty-role-badge">Assistant Professor</span>
+                        <div class="faculty-info-list">
+                            <p><i class="fa-solid fa-graduation-cap"></i> <strong>Qualification:</strong> M.A.</p>
+                            <p><i class="fa-solid fa-phone"></i> <strong>Phone No:</strong> <a href="tel:6001870714">6001870714</a></p>
+                            <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> <a href="mailto:pritirekhagogoi10@gmail.com">pritirekhagogoi10@gmail.com</a></p>
+                        </div>
+                        <button class="btn-profile" onclick="alert('Profile: Pritirekha Gogoi, Assistant Professor (Assamese Department)')"><i class="fa-solid fa-user"></i> View Profile</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Row: 4th Faculty Member Centered -->
+            <div class="faculty-center-row">
+                <div class="faculty-box-card">
+                    <div class="faculty-card-cover"></div>
+                    <div class="faculty-avatar">
+                        <img 
+                            src="faculty_kartik_nath.jpg" 
+                            alt="Kartik Nath" 
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80';"
+                        >
+                    </div>
+                    <div class="faculty-card-content">
+                        <h3>Kartik Nath</h3>
+                        <span class="faculty-role-badge">Guest Faculty</span>
+                        <div class="faculty-info-list">
+                            <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> <a href="mailto:knath5180@gmail.com">knath5180@gmail.com</a></p>
+                        </div>
+                        <button class="btn-profile" onclick="alert('Profile: Kartik Nath, Guest Faculty (Assamese Department)')"><i class="fa-solid fa-user"></i> View Profile</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <!-- =========================================================================
+         END COPYING HERE
+         ========================================================================= -->
+
+</body>
+</html>

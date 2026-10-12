@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="as">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমাৰ বিষয়ে | About Us - Majuli College (মাজুলী মহাবিদ্যালয়)</title>
+    <!-- Google Fonts & Font Awesome CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Official Portal Stylesheet & Assamese Content Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assamese.css">
+<script src="/_aistudio-iframe.js?v=6634132a"></script></head>
+<body>
+
+    <!-- Top Utility Bar (Exact match to index.html) -->
+    <div class="top-utility-bar">
+        <div>
+            <span class="badge-naac"><i class="fa-solid fa-award"></i> NAAC Accredited Grade 'B++'</span>
+            <span> · Affiliated to Dibrugarh University</span>
+            <span> · AISHE Code: C-8561</span>
+        </div>
+        <div>
+            <a href="tel:+913775273359"><i class="fa-solid fa-phone"></i> +91 3775 273359</a>
+            <span style="margin: 0 8px; color: #475569;">|</span>
+            <a href="mailto:majulicollege@gmail.com"><i class="fa-solid fa-envelope"></i> majulicollege@gmail.com</a>
+            <span style="margin: 0 8px; color: #475569;">|</span>
+            <a href="javascript:void(0)" onclick="openCertModal('73230b72-4749-4abf-a506-73a47bc95164')" style="color: #fde047; font-weight: 600;">
+                <i class="fa-solid fa-shield-halved"></i> Verify Certificate
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Branding Header with Centered Crest and Title (Exact match to index.html) -->
+    <header class="main-header" style="text-align: center;">
+        <div style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+            <svg class="college-emblem" viewBox="0 0 100 100" style="margin-bottom: 4px;">
+                <circle cx="50" cy="50" r="46" fill="#0f1f3d" stroke="#f59e0b" stroke-width="3" />
+                <circle cx="50" cy="50" r="42" fill="#ffffff" />
+                <path d="M 20 68 Q 50 60 80 68 Q 50 76 20 68 Z" fill="#38bdf8" opacity="0.7" />
+                <path d="M 16 75 Q 50 68 84 75 Q 50 82 16 75 Z" fill="#0284c7" />
+                <path d="M 30 52 Q 50 48 50 58 Q 50 48 70 52 L 70 58 Q 50 54 50 63 Q 50 54 30 58 Z" fill="#b45309" />
+                <path d="M 40 46 C 40 40, 60 40, 60 46 C 58 50, 42 50, 40 46 Z" fill="#eab308" />
+                <text x="50" y="24" text-anchor="middle" font-size="6.5" font-weight="bold" fill="#0f1f3d">MAJULI COLLEGE</text>
+                <text x="50" y="90" text-anchor="middle" font-size="6" font-weight="bold" fill="#0f1f3d">ESTD. 1962</text>
+            </svg>
+            <h1 class="font-serif-college" style="font-size: 1.7rem; font-weight: 800; color: #0f1f3d; margin-bottom: 2px;">
+                MAJULI COLLEGE
+            </h1>
+            <p style="font-size: 0.8rem; color: #475569; font-weight: 500;">
+                P.O. Kamalabari, Dist. Majuli, Assam - 785106 · Estd. 17th September 1962
+            </p>
+            <div class="naac-center-banner" style="margin-top: 4px;">
+                Accredited &quot;B++&quot; by NAAC
+            </div>
+        </div>
+    </header>
+
+    <!-- OFFICIAL SOLID BLUE NAVBAR (Exact match to index.html) -->
+    <nav class="official-navbar">
+        <div class="nav-inner-container">
+            <div class="mobile-nav-header">
+                <span style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">
+                    <i class="fa-solid fa-house"></i> Majuli College Portal
+                </span>
+                <button class="mobile-hamburger" onclick="document.querySelector('.official-nav-menu').classList.toggle('active')">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <ul class="official-nav-menu">
+                <!-- 1. HOME (Returns to index.html) -->
+                <li class="official-nav-item">
+                    <a href="index.html" class="official-nav-link">
+                        <i class="fa-solid fa-house"></i> HOME
+                    </a>
+                </li>
+
+                <!-- 2. ABOUT ▾ (Current Active Section) -->
+                <li class="official-nav-item">
+                    <a href="about.html" class="official-nav-link active">
+                        ABOUT <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html" style="color: #0082cb; font-weight: 700;"><i class="fa-solid fa-check"></i> About Us (আমাৰ বিষয়ে)</a></li>
+                        <li><a href="index.html#mission-vision" onclick="window.location.href='index.html#mission-vision'">Mission &amp; Vission</a></li>
+                        <li><a href="javascript:void(0)" onclick="openAboutDocModal('emblem')">Emblem</a></li>
+                        <li><a href="javascript:void(0)" onclick="openAboutDocModal('organogram')">College Organogram</a></li>
+                        <li><a href="javascript:void(0)" onclick="openAboutDocModal('anthem')">College Anthem</a></li>
+                        <li><a href="javascript:void(0)" onclick="openAboutDocModal('location')">Location</a></li>
+                        <li><a href="javascript:void(0)" onclick="openAboutDocModal('principals')">List of Principals</a></li>
+                        <li><a href="javascript:void(0)" onclick="openAboutDocModal('code-of-conduct')">Code of Conduct</a></li>
+                        <li><a href="javascript:void(0)" onclick="openAboutDocModal('undertakings')">Undertakings</a></li>
+                        <li class="has-submenu">
+                            <a href="javascript:void(0)" onclick="togglePolicyDropdown(event)">
+                                <span>Policy Doucments</span> <i class="fa-solid fa-caret-right"></i>
+                            </a>
+                            <ul class="dropdown-submenu policy-submenu-list" id="policySubmenu">
+                                <li><a href="javascript:void(0)" onclick="openAboutDocModal('policy-1')">Policy 1</a></li>
+                                <li><a href="javascript:void(0)" onclick="openAboutDocModal('policy-2')">Policy 2</a></li>
+                                <li><a href="javascript:void(0)" onclick="openAboutDocModal('policy-3')">Policy 3</a></li>
+                                <li><a href="javascript:void(0)" onclick="openAboutDocModal('policy-4')">Policy 4</a></li>
+                                <li><a href="javascript:void(0)" onclick="openAboutDocModal('policy-5')">policy 5</a></li>
+                                <li><a href="javascript:void(0)" onclick="openAboutDocModal('policy-6')">Policy 6</a></li>
+                                <li><a href="javascript:void(0)" onclick="openAboutDocModal('policy-7')">Policy 7</a></li>
+                                <li><a href="javascript:void(0)" onclick="openAboutDocModal('policy-8')">Policy 8</a></li>
+                                <li><a href="javascript:void(0)" onclick="openAboutDocModal('policy-9')">Policy 9</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:void(0)" onclick="openAboutDocModal('distinctiveness')">Institutional Distinctiveness</a></li>
+                        <li><a href="javascript:void(0)" onclick="openAboutDocModal('perspective-plan')">Perspective Plan</a></li>
+                        <li><a href="javascript:void(0)" onclick="openAboutDocModal('green-audit')">Green Audit Report</a></li>
+                        <li><a href="javascript:void(0)" onclick="openAboutDocModal('iso-certificate')">ISO Certificate</a></li>
+                    </ul>
+                </li>
+
+                <!-- 3. ADMINISTRATION ▾ -->
+                <li class="official-nav-item">
+                    <a href="index.html#about" class="official-nav-link">
+                        ADMINISTRATION <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#about">Governing Body</a></li>
+                        <li><a href="index.html#about">Administrative Office &nbsp;▸</a></li>
+                        <li><a href="index.html#about">Cells &amp; Committee</a></li>
+                        <li><a href="index.html#about">AAA Report</a></li>
+                    </ul>
+                </li>
+
+                <!-- 4. ACADEMICS ▾ -->
+                <li class="official-nav-item">
+                    <a href="index.html#academics" class="official-nav-link">
+                        ACADEMICS <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)" onclick="openBrochureModal()" style="color: #b45309; font-weight: 700;">Admission &nbsp;▸</a></li>
+                        <li><a href="index.html#academics">Programmes &nbsp;▸</a></li>
+                        <li><a href="index.html#academics">Departments &nbsp;▸</a></li>
+                        <li><a href="index.html#academics">Curriculum Delivery &nbsp;▸</a></li>
+                    </ul>
+                </li>
+
+                <!-- 5. IQAC -->
+                <li class="official-nav-item">
+                    <a href="index.html#about" class="official-nav-link">
+                        IQAC
+                    </a>
+                </li>
+
+                <!-- 6. FACILITIES ▾ -->
+                <li class="official-nav-item">
+                    <a href="index.html#facilities" class="official-nav-link">
+                        FACILITIES <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#facilities">ICT</a></li>
+                        <li><a href="index.html#facilities">Sports</a></li>
+                        <li><a href="index.html#facilities">Hostel</a></li>
+                        <li><a href="index.html#facilities">Canteen</a></li>
+                        <li><a href="index.html#facilities">Conference Hall</a></li>
+                        <li><a href="index.html#facilities">Library &nbsp;▸</a></li>
+                        <li><a href="index.html#facilities">Miscellaneous</a></li>
+                    </ul>
+                </li>
+
+                <!-- 7. RTI -->
+                <li class="official-nav-item">
+                    <a href="index.html#contact" class="official-nav-link">
+                        RTI
+                    </a>
+                </li>
+
+                <!-- 8. NIRF ▾ -->
+                <li class="official-nav-item">
+                    <a href="javascript:void(0)" class="official-nav-link">
+                        NIRF <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)" onclick="alert('NIRF 2026 Data Uploaded.')">NIRF 2026</a></li>
+                        <li><a href="javascript:void(0)" onclick="alert('NIRF 2025 Data Uploaded.')">NIRF 2025</a></li>
+                    </ul>
+                </li>
+
+                <!-- 9. NEP -->
+                <li class="official-nav-item">
+                    <a href="index.html#academics" class="official-nav-link">
+                        NEP
+                    </a>
+                </li>
+
+                <!-- 10. GALLERY ▾ -->
+                <li class="official-nav-item">
+                    <a href="index.html#gallery" class="official-nav-link">
+                        GALLERY <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#gallery" style="font-weight: 700; color: #0082cb;"><i class="fa-solid fa-images"></i> All Photo Archive</a></li>
+                        <li><a href="index.html#gallery">Events Gallery (College Week &amp; Fests)</a></li>
+                        <li><a href="index.html#gallery">Digital Classroom Images &amp; Labs</a></li>
+                        <li><a href="index.html#gallery">Campus &amp; Memorial Gate</a></li>
+                        <li><a href="index.html#gallery">Sports &amp; Championship Trophies</a></li>
+                    </ul>
+                </li>
+
+                <!-- 11. STUDENT'S CORNER ▾ -->
+                <li class="official-nav-item">
+                    <a href="index.html#student-corner" class="official-nav-link">
+                        STUDENT&apos;S CORNER <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu right-align">
+                        <li><a href="javascript:void(0)" onclick="openCertModal('73230b72-4749-4abf-a506-73a47bc95164')" style="color: #047857; font-weight: 700;"><i class="fa-solid fa-shield-halved"></i> Verify Certificate (Jayanta Nath)</a></li>
+                        <li><a href="javascript:void(0)" onclick="openBrochureModal()"><i class="fa-solid fa-file-pdf"></i> ITEP Brochure &amp; Vacancy</a></li>
+                        <li><a href="https://assamadmission.samarth.ac.in" target="_blank">SAMARTH Student Portal</a></li>
+                        <li><a href="https://dibru.ac.in" target="_blank">DU Examination &amp; Results</a></li>
+                        <li><a href="index.html#notices">Anti-Ragging Helpline</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Breadcrumb Bar -->
+    <div style="background-color: #f1f5f9; border-bottom: 1px solid #e2e8f0; padding: 10px 8%; font-size: 0.8rem; color: #64748b;">
+        <div style="max-width: 920px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <div>
+                <a href="index.html" style="color: #0082cb; text-decoration: none; font-weight: 600;">
+                    <i class="fa-solid fa-house"></i> Home
+                </a>
+                <span style="margin: 0 6px;">/</span>
+                <span style="color: #1e293b; font-weight: 700;">About Us (আমাৰ বিষয়ে)</span>
+            </div>
+            <a href="index.html" style="color: #0f1f3d; text-decoration: none; font-weight: 700; background: #e2e8f0; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; display: inline-flex; align-items: center; gap: 5px;">
+                <i class="fa-solid fa-arrow-left"></i> উভতি যাওক (Back to Main Portal)
+            </a>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         MAIN ASSAMESE CONTENT CARD (Without changing Header or Footer)
+         ========================================================================== -->
+    <main class="content-card" style="margin-top: 30px;">
+        <h1>আমাৰ বিষয়ে</h1>
+        <div class="heading-accent-line"></div>
+
+        <div style="text-align: center; margin-bottom: 28px;">
+            <span class="heritage-badge">
+                <i class="fa-solid fa-landmark"></i> ঐতিহ্যমণ্ডিত নদীদ্বীপ মাজুলীৰ প্ৰথম উচ্চ শিক্ষাৰ পীঠস্থান (Kamalabari, Majuli)
+            </span>
+        </div>
+
+        <!-- Banner 1: Entrance Gate -->
+        <div class="banner-container">
+            <img src="gate.webp" alt="মাজুলী মহাবিদ্যালয় তোৰণ" class="banner-img" onerror="this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1000&q=80'">
+            <div class="banner-caption">
+                <i class="fa-solid fa-archway"></i> <span class="gold-tag">তোৰণ:</span> মাজুলী মহাবিদ্যালয় সোণালী জয়ন্তী স্মৃতি প্ৰৱেশ তোৰণ (১৯৬২–২০১২), কমলাবাৰী
+            </div>
+        </div>
+
+        <p class="lead-para">
+            ১৯৬২ চনৰ ১৭ ছেপ্টেম্বৰত শিক্ষাৰ পোহৰেৰে নদীদ্বীপটো আলোকিত কৰাৰ পবিত্ৰ অভিযানেৰে প্ৰতিষ্ঠা হোৱা মাজুলী মহাবিদ্যালয় অসমৰ একমাত্ৰ দ্বীপ জিলা মাজুলীৰ কমলাবাৰীত অৱস্থিত উচ্চ শিক্ষাৰ প্ৰধান শিক্ষানুষ্ঠান। কমলাবাৰীত মহাবিদ্যালয়খন স্থাপন কৰাৰ প্ৰয়োজনীয়তা বিশ্বৰ আটাইতকৈ জনবহুল নদী দ্বীপটোৰ ভৌগোলিক বিচ্ছিন্নতা আৰু শৈক্ষিক পিছপৰাৰ পৰাই উদ্ভৱ হৈছিল। দেশৰ মূলসুঁতিৰ সৈতে ইয়াক সংযোগ কৰাটো ষাঠিৰ দশকৰ আৰম্ভণিতে এক প্ৰত্যাহ্বান আছিল। সচেতন শিক্ষাবিদ আৰু জনকৰ্মীৰ এটা দলে উপলব্ধি কৰিলে যে উচ্চ শিক্ষাৰ সাধনাৰ জৰিয়তেহে এই কাম সম্ভৱ হ’ব।
+        </p>
+
+        <!-- Banner 2: Founders Plinth -->
+        <div class="banner-container">
+            <img src="slider-7 (1).webp" alt="পঞ্চৰত্ন প্ৰতিষ্ঠাতা স্মাৰক" class="banner-img" style="height: 330px;" onerror="this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80'">
+            <div class="banner-caption">
+                <i class="fa-solid fa-monument"></i> <span class="gold-tag">স্মাৰক বেদী:</span> প্ৰতিষ্ঠাপক সচিব প্ৰয়াত কেশব্ৰম বৰা আৰু আজীৱন সেৱকসকলৰ স্মাৰক বেদী
+            </div>
+        </div>
+
+        <p>
+            ১৯৬২ চনৰ মাৰ্চ মাহত কমলাবাৰীৰ মাজুলী মিলন সংঘত এখন ৰাজহুৱা সভা অনুষ্ঠিত হয়, যাৰ একমাত্ৰ উদ্দেশ্য আছিল মাজুলীবাসীক উচ্চ শিক্ষা প্ৰদানৰ বাবে এখন মহাবিদ্যালয় প্ৰতিষ্ঠা সম্পৰ্কে আলোচনা কৰা। সভাত সকলো সম্প্ৰদায়ৰ সদস্যৰে সৈতে এখন পৰিচালনা সমিতি গঠন কৰি কামটো আগুৱাই নিয়াৰ ব্যৱস্থা কৰা হয়। প্ৰয়াত কেশব্ৰম বৰাক সভাপতি, আৰু প্ৰয়াত কৃষ্ণ কান্ত গোস্বামীক পৰিচালনা সমিতিৰ সম্পাদক নিযুক্তি দিয়া হয়। বিধ্বংসী বানপানীয়ে তেওঁলোকৰ ঐতিহাসিক প্ৰচেষ্টাৰ প্ৰতি প্ৰচণ্ড ভাবুকি কঢ়িয়াই অনাৰ পিছতো মাজুলীৰ এই দুজন বিখ্যাত পুত্ৰই দুই এজন নিষ্ঠাবান ব্যক্তিৰ সৈতে খোজকাঢ়ি চুক-কোণে ঘূৰি ফুৰিছিল, জনমত সংগঠিত কৰিছিল, আৰু প্ৰস্তাৱিত মহাবিদ্যালয়খনৰ বাবে অনুদান সংগ্ৰহ কৰিছিল। এনেদৰে মহাবিদ্যালয় খোলাৰ সপোন পূৰণ হ’ল।
+        </p>
+
+        <div class="quote-highlight-box">
+            <div class="quote-title">
+                <i class="fa-solid fa-graduation-cap"></i> প্ৰতিষ্ঠাপক অধ্যক্ষৰ অৱদান:
+            </div>
+            <p style="margin-bottom: 0; font-size: 16.5px; line-height: 1.8;">
+                সেই সময়ত উত্তৰ লখিমপুৰ মহাবিদ্যালয়ত ইতিহাসৰ প্ৰবক্তা হিচাপে কৰ্মৰত মাজুলীৰ আন এজন বিশিষ্ট পুত্ৰ <strong>অতুল চন্দ্ৰ গোস্বামীক</strong> স্মৰণ কৰা উচিত। তেওঁ সদয়ভাৱে নতুনকৈ প্ৰতিষ্ঠা হোৱা মহাবিদ্যালয়খনৰ সন্মানীয় অধ্যক্ষ হিচাপে সেৱা আগবঢ়াবলৈ সন্মত হয়, যিটো ভূমিকা তেওঁ ১৯৬৫ চনলৈকে গ্ৰহণ কৰি মহাবিদ্যালয়খনক এক শক্তিশালী ভেটি প্ৰদান কৰে।
+            </p>
+        </div>
+
+        <!-- Banner 3: Campus Overview -->
+        <div class="banner-container">
+            <img src="democampus.webp" alt="মহাবিদ্যালয় চৌহদৰ আৰ্হি" class="banner-img" style="height: 330px;" onerror="this.src='https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1000&q=80'">
+            <div class="banner-caption">
+                <i class="fa-solid fa-building-columns"></i> <span class="gold-tag">চৌহদ:</span> ১২.৫ একৰ পৰিসৰৰ প্ৰাকৃতিক সেউজ পৰিৱেশত মাজুলী মহাবিদ্যালয় চৌহদ আৰ্হি
+            </div>
+        </div>
+
+        <p>
+            আমি আমাৰ ছাত্ৰ-ছাত্ৰীসকলক মানৱীয় মূল্যবোধৰ প্ৰতি অতিশয় সন্মান জনাই সমাজৰ মূল্যৱান সদস্য হিচাপে গঢ়ি তুলিবলৈ চেষ্টা কৰোঁ। আমাৰ লক্ষ্য হৈছে সকলো পক্ষপাতিত্ব আৰু অন্ধবিশ্বাসৰ পৰা মুক্ত, বৈজ্ঞানিক দৃষ্টিভংগী গঢ়ি তুলি ছাত্ৰ-ছাত্ৰীক আত্মনিৰ্ভৰশীল কৰা। ১৯৮৮ চনত আমাৰ ৰূপালী জয়ন্তী উদযাপন আৰু ২০১৩ চনত সোণালী জয়ন্তী উদযাপনৰ প্ৰচণ্ড সফলতাই এই প্ৰতিষ্ঠানৰ গৌৰৱময় পৰম্পৰাক প্ৰতিফলিত কৰিছে। মাজুলী মহাবিদ্যালয়ৰ স্নাতকসকলে চৰকাৰী কাৰ্যালয়, বিদ্যালয়, মহাবিদ্যালয়, বিশ্ববিদ্যালয়, আৰু বিভিন্ন ব্যক্তিগত প্ৰতিষ্ঠানত নিষ্ঠা, আন্তৰিকতা, আৰু উদ্ভাৱনী চিন্তাৰে সেৱা আগবঢ়াই আছে, যিবোৰ সকলো এই প্ৰতিষ্ঠানে লালন-পালন কৰিছে।
+        </p>
+
+        <p>
+            ডিব্ৰুগড় বিশ্ববিদ্যালয়ৰ সৈতে জড়িত মাজুলী মহাবিদ্যালয়ত কলা আৰু বিজ্ঞান দুয়োটা ধাৰাত স্নাতক শিক্ষা প্ৰদান কৰা হয়। কলা ধাৰাটো আৰম্ভ হোৱাৰ পৰাই কাৰ্যক্ষম হৈ থকাৰ বিপৰীতে ১৯৭৮ চনত আৰম্ভ হোৱা বিজ্ঞান ধাৰাটো ১৯৮৬ চনত ঘাটি অনুদান-সাহায্য ব্যৱস্থাৰ অধীনলৈ আহে। বৰ্তমান মহাবিদ্যালয়খনৰ কলা ধাৰাত ১০টা আৰু বিজ্ঞান ধাৰাত ৫টা বিভাগ আছে। কলেজখনে বছৰি প্ৰায় ১০০০ ছাত্ৰ-ছাত্ৰীক উচ্চতৰ মাধ্যমিক আৰু ডিগ্ৰী দুয়োটা পাঠ্যক্ৰম প্ৰদান কৰে। ইয়াৰ উপৰিও কৃষ্ণ কান্ত হাণ্ডিকি ৰাজ্যিক মুক্ত বিশ্ববিদ্যালয় (KKHSOU)ৰ অধীনত বিভিন্ন বৃত্তিমূলক আৰু মুক্ত পাঠ্যক্ৰম উপলব্ধ।
+        </p>
+
+        <p>
+            আগন্তুক চিন্তাধাৰাৰ পেছাদাৰীসকলৰ এক গতিশীল গোটৰ সহায় আৰু সহযোগিতাৰে কলেজখনে সময়ৰ বালিত নিজৰ অমলিন ছাপ এৰি দিবলৈ প্ৰতিশ্ৰুতিবদ্ধ।
+        </p>
+    </main>
+
+    <!-- 4-Column Academic Footer (Exact match to index.html) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4 class="font-serif-college">Majuli College</h4>
+                <p>Pioneer seat of higher education in the river island of Majuli. Established on 17 September 1962, affiliated with Dibrugarh University, accredited Grade &apos;B++&apos; by NAAC.</p>
+                <p style="color: #f59e0b; font-weight: 600;"><i class="fa-solid fa-award"></i> AISHE Code: C-8561</p>
+            </div>
+            <div class="footer-col">
+                <h4 class="font-serif-college">Portals &amp; Links</h4>
+                <ul>
+                    <li><a href="https://assamadmission.samarth.ac.in" target="_blank">SAMARTH Assam Portal</a></li>
+                    <li><a href="https://dibru.ac.in" target="_blank">Dibrugarh University</a></li>
+                    <li><a href="https://www.ugc.gov.in" target="_blank">UGC Official</a></li>
+                    <li><a href="https://ncte.gov.in" target="_blank">NCTE Delhi</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="font-serif-college">Student Support</h4>
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="openCertModal('73230b72-4749-4abf-a506-73a47bc95164')">Verify Certificate Online</a></li>
+                    <li><a href="javascript:void(0)" onclick="openBrochureModal()">ITEP Application Brochure</a></li>
+                    <li><a href="index.html#gallery">Campus Gallery</a></li>
+                    <li><a href="tel:18001805522">Anti-Ragging Squad (1800-180-5522)</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="font-serif-college">Contact Campus</h4>
+                <p><i class="fa-solid fa-location-dot"></i> P.O. Kamalabari, Majuli - 785106, Assam</p>
+                <p><i class="fa-solid fa-phone"></i> +91 3775 273359</p>
+                <p><i class="fa-solid fa-envelope"></i> majulicollege@gmail.com</p>
+                <p><i class="fa-solid fa-ship"></i> Via Nimati Ghat to Kamalabari Ghat Ferry</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Majuli College, Kamalabari. All Rights Reserved. Affiliated with Dibrugarh University | NAAC Accredited B++.</p>
+        </div>
+    </footer>
+
+    <!-- Certificate Verification Modal -->
+    <div id="certModal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-top">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-shield-halved" style="color: #34d399;"></i>
+                    <span>Digital Credential Verification · Majuli College &amp; HP LIFE</span>
+                </div>
+                <button class="modal-close-btn" onclick="closeCertModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+                    <input type="text" id="certSearchInput" value="73230b72-4749-4abf-a506-73a47bc95164" style="flex: 1; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 4px; font-family: monospace;">
+                    <button class="btn-primary" onclick="alert('Verification check: Valid digital credential.')">Verify</button>
+                </div>
+
+                <div class="cert-canvas">
+                    <div class="cert-header">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <div class="hp-badge">hp</div>
+                            <span style="font-size: 1.3rem; font-weight: 800; color: #1e293b;">LIFE</span>
+                        </div>
+                        <div style="width: 1px; height: 30px; background-color: #cbd5e1;"></div>
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                            <div class="hp-badge" style="width: 32px; height: 32px; font-size: 0.85rem;">hp</div>
+                            <span style="font-size: 0.95rem; font-weight: 600; color: #475569;">Foundation</span>
+                        </div>
+                    </div>
+
+                    <h2 class="cert-title">Certificate of Completion</h2>
+                    <div class="cert-student-name" id="certStudentName">Jayanta Nath</div>
+                    <p style="font-size: 0.85rem; color: #64748b;">has successfully completed the HP LIFE online course</p>
+                    <div class="cert-course-name">Basics of Finance</div>
+
+                    <div class="cert-description">
+                        By completing this course, the above-named student has learned new skills including how to categorize business expenses, how to calculate the break-even point of a business, and how to develop spreadsheets to make financial calculations easier.
+                    </div>
+
+                    <div class="cert-signature-row">
+                        <div>
+                            <div style="font-size: 0.75rem; color: #64748b;">Presented</div>
+                            <div style="font-size: 0.9rem; font-weight: 700; color: #1e293b;">7/3/2025</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-family: cursive; font-size: 1.2rem; color: #334155;">Stephanie Bormann</div>
+                            <div style="width: 160px; height: 1px; background: #94a3b8; margin: 4px auto;"></div>
+                            <div style="font-size: 0.8rem; font-weight: 700; color: #1e293b;">Stephanie Bormann</div>
+                            <div style="font-size: 0.7rem; color: #64748b;">Deputy Director, HP Foundation</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 20px; font-size: 0.72rem; color: #94a3b8; font-family: monospace;">
+                        Certificate serial number: 73230b72-4749-4abf-a506-73a47bc95164
+                    </div>
+                </div>
+
+                <div style="margin-top: 16px; display: flex; justify-content: flex-end; gap: 10px;">
+                    <button class="btn-primary" onclick="window.print()"><i class="fa-solid fa-print"></i> Print</button>
+                    <button class="btn-outline" onclick="closeCertModal()" style="color: #0f1f3d; border-color: #cbd5e1;">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ITEP Brochure Modal -->
+    <div id="brochureModal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-top" style="background: #92400e;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-file-pdf" style="color: #fde047;"></i>
+                    <span>ITEP B.A. B.Ed. Admission Information Brochure</span>
+                </div>
+                <button class="modal-close-btn" onclick="closeBrochureModal()">&times;</button>
+            </div>
+            <div class="modal-body" style="font-size: 0.85rem; line-height: 1.7;">
+                <div style="background: #fefce8; border: 1px solid #fef08a; padding: 12px; border-radius: 6px; margin-bottom: 16px; color: #854d0e;">
+                    <strong>VACANT SEAT ADVISORY:</strong> On-spot counselling round is currently being held at Majuli College Administrative Block for 9 vacant seats in ITEP B.A. B.Ed.
+                </div>
+                <h4 style="font-size: 1.1rem; color: #0f1f3d; margin-bottom: 8px;">4-Year Integrated Teacher Education Programme</h4>
+                <p>Mandated under NEP-2020, students earn a dual B.A. Honours + B.Ed. qualification in four academic years instead of five. Admission is based on NCET scorecard conducted by NTA.</p>
+                <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 16px;">
+                    <button class="btn-primary" onclick="alert('ITEP Admission Prospectus 2026-27 downloaded.')"><i class="fa-solid fa-download"></i> Download Full PDF</button>
+                    <button class="btn-outline" onclick="closeBrochureModal()" style="color: #0f1f3d; border-color: #cbd5e1;">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Institutional Document Modal -->
+    <div id="aboutDocModal" class="modal-overlay">
+        <div class="modal-box" style="max-width: 750px;">
+            <div class="modal-top">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-landmark" style="color: #fde047;"></i>
+                    <span id="aboutDocTitle" style="font-weight: 700; font-size: 0.95rem;">About Majuli College</span>
+                </div>
+                <button class="modal-close-btn" onclick="closeAboutDocModal()">&times;</button>
+            </div>
+            <div class="modal-body" style="padding: 24px; font-size: 0.88rem; line-height: 1.7; color: #334155;">
+                <div id="aboutDocSubtitle" style="font-size: 0.78rem; font-weight: 700; color: #0082cb; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.5px;"></div>
+                <div id="aboutDocBody"></div>
+                <div style="margin-top: 24px; padding-top: 14px; border-top: 1px solid #e2e8f0; display: flex; justify-content: flex-end; gap: 10px;">
+                    <button class="btn-primary" onclick="window.print()"><i class="fa-solid fa-print"></i> Print Document</button>
+                    <button class="btn-outline" onclick="closeAboutDocModal()" style="color: #0f1f3d; border-color: #cbd5e1;">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External Script -->
+    <script src="script.js"></script>
+</body>
+</html>
